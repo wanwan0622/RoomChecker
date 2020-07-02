@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>RoomChecker</title>
+</head>
+
+<!--今回編集するのはbodyの中だけ！-->
+<body> <!--本体!-->
+
+<script type="text/javascript"> 
+  function lifeTimer(){
+    let room_num = document.UserForm.room_num.value - 0
+    let hour = document.UserForm.hour.value - 0
+    let minute = document.UserForm.minute.value - 0
+
+    let array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+    for (let i = 0; i < 10; i++){
+        if (hour >= 12 && minute > 00){
+
+        }
+    }
+
+
+    let birth = new Date(year, month-1, day)
+    let now = new Date()
+
+    let timeDiff = now.getTime() - birth.getTime()
+    document.birthForm.display.value = (timeDiff / 1000)
+
+    setTimeout('lifeTimer()', 100)
+  }
+</script> <!--台本, WebページにJSで動きを与える!-->
+
+<h1>Room Checker</h1>
+<h2>練習室の空室状況</h2>
+
+<img src = "room.png" title = "練習室">
+
+<from name="VisiterForm">
+  
+</form>
+
+
+<form name="UserForm"> <!--利用者が自分の利用する部屋番号と時間を入力-->
+  利用する部屋の番号を入力(半角数字)！ <input type="text" size="2" name="room_num" /> <br>
+  何時まで利用する予定ですか？ <input type="text" size="2" name="hour" />時
+  <input type="text" size="2" name="minute" />分 <br>
+
+  <input type="button" value="押してね!" onclick="lifeTimer()" /><br>
+
+  <!--生まれてから<input type = "text" size = "16" name = "display" />秒経ちました。-->
+
+</form>
+
+
+
+</body>
+<!--body終わり-->
+
+<style>
+  body {
+    background: white;
+    color: #323232;
+    font-weight: 300;
+    height: 100vh;
+    margin: 0;
+    display: initial;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: initial;
+  }
+</style>
+</html>
